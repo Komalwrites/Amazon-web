@@ -18,6 +18,15 @@ const corsOptions = {
 };
 
 app.use(cors(corsOptions)); //to use different ports for front-end and back-end
+
+// Serve static files from the React app (production build)
+app.use(express.static(path.join(__dirname, 'build')));
+
+// All other routes should return the index.html for React Router to handle
+app.get('*', (req, res) => {
+  res.sendFile(path.join(__dirname, 'build', 'index.html'));
+});
+
 app.use(router);
 
 const port = process.env.PORT || 8005; //created port
