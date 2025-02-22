@@ -1,6 +1,6 @@
 import { createAsyncThunk } from '@reduxjs/toolkit';
 export const getProducts = createAsyncThunk(
-    '/getProducts',
+    'products/getProducts',
     async () => {
       try {
         const response = await fetch('/getproducts', {
