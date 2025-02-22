@@ -1,0 +1,284 @@
+*{
+    margin:0px;
+    font-family:arial;
+    border:border-box; /* Padding and Border dimensions considers inside content*/
+}
+
+/* **************************************************Nav-Bar**************************************************** */
+header{
+    background-color: #131921;
+    width:100%;
+    height: 60px;
+    /* position: absolute; */
+    color: white;
+    top: 0;
+}
+
+nav{
+    width: 100%;
+    margin: auto;
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.border{
+    border:1px solid transparent;
+    border-radius:2px;
+    height : 50px;
+    padding-left : 5px;
+    padding-right : 5px;
+    align-items :center;
+}
+.border:hover{
+    border:1px solid white;
+    border-radius:2px;
+}
+
+/* 1)Nav-Logo */
+.navlogo{
+    margin-left:10px;
+}
+.navlogo img{
+    width: 100px;
+    margin-top: 6px;
+}
+
+/* 2)Location */
+.nav-location{
+    display:flex;
+    width:75px;
+    align-items:center;
+    justify-content:center;
+ }
+.location-icon{
+    margin-top:10px;
+    margin-left:0px;
+ }
+.location-title{
+    color:#CCCCCC;
+    font-size:12px;
+}
+.location-name{
+    font-size:14px;
+    font-weight:700;
+}
+
+
+/* 3)Search bar */
+.nav-searchbar{
+    display:flex;
+    width:640px;
+    height:40px;  
+}
+.nav-searchbar:focus-within{
+    border:3px solid orange;
+    border-radius:6px;
+}
+.search-select{
+    background-color:#f3f3f3;
+    font-size:0.75rem;
+    color:grey;
+    width:62px;
+    text-align:center;
+    border-top-left-radius:3px;
+    border-bottom-left-radius:3px;
+    border:none;
+    border-right:1px solid #cccccc;
+    cursor: pointer;
+}
+.search-input{
+    border:none;
+    width:100%;
+    font-size:14.5px;
+    font-weight:500;
+    outline:none;
+    padding:7px 10px 10px 7px;
+}
+.search-input:focus-within{
+    border:none;
+}
+.search-icon{
+    width:55px;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    background-color:#febd68;
+    border-top-right-radius:3px;
+    border-bottom-right-radius:3px;
+    color:#0f1111;
+    cursor: pointer;
+}
+.searchList{
+    position:absolute;
+    top:50px;
+    left:271px;
+    width:587px;
+}
+.extrasearch{
+    color:black;
+    background-color: white;
+    z-index: 2;
+    border:0.5px solid gainsboro;
+    font-size: 15px;
+}
+.extrasearch a{
+    text-decoration: none;
+    color:#0f1111;
+}
+/* 4)Language-selector */
+.nav-language{
+    display:flex;
+    width:65px;
+    height:40px;
+    padding-top:10px;
+}
+.country-flag{
+    display:flex;
+}
+.select-lang{
+    font-size:14px;
+    color:white;
+    background-color:#131a22;
+    border:none;
+    font-weight:700;
+}
+
+/* 5)Sign-In and account lists */
+.nav-sign-in{
+    display:inline;
+    justify-content:center;
+    padding-left:5px;
+    padding-top:5px;
+    height:45px;
+    align-items:center;
+}
+.sign-in
+{
+    padding-left:3px;
+    font-size:12px;
+    color:white;
+    text-decoration:none;
+    margin:0px;
+}
+.accounts{
+    font-size:14px;
+    color:white;
+    background-color:#131a22;
+    border:none;
+    font-weight:700;
+    /* padding-top:0px; */
+    margin:0px;
+}
+
+
+/* 6) Returns and Orders*/
+.nav-returns-orders{
+    display:inline;
+    justify-content:center;
+    padding-left:5px;
+    padding-top:5px;
+    height:45px;
+    align-items:center;
+}
+.returns
+{
+    padding-left:3px;
+    font-size:12px;
+    color:white;
+    text-decoration:none;
+    margin:0px;
+}
+.orders{
+    font-size:14px;
+    color:white;
+    background-color:#131a22;
+    border:none;
+    font-weight:700;
+    /* padding-top:0px; */
+    margin:0px;
+    text-decoration:none;
+}
+
+/* 7)Cart */
+
+.nav-cart{
+    display:flex;
+    /* justify-content:center; */
+    height:44px;
+    align-items:end;
+    padding-bottom:7px;
+    margin-right:10px;
+    
+}
+.badge-link{
+    color:white;
+    text-decoration:none;
+    display:flex;
+    height:45px;
+    align-items:end;
+    /* padding-bottom:10px; */
+    margin-right:10px;
+}
+.cart{
+    font-size:14px;
+    color:white;
+    background-color:#131a22;
+    border:none;
+    font-weight:700;
+    text-decoration:none;
+    /* padding-bottom:8px; */
+
+}
+
+/* ************************************************Nav-Panel****************************************** */
+.panel{
+    width: 100%;
+    height: 40px;
+    background-color: #232f3e;
+    position: relative;
+    top: 0px;
+    justify-content:left;
+    align-items:center;
+    color:white;
+    font-size:14px;
+}
+.panel-all{
+    display:flex;
+    margin-left:10px;
+    border:1px solid transparent;
+    height:39px;
+    padding-left : 8px;
+    padding-right : 8px;
+    align-items :center;
+    cursor : pointer;
+}
+.panel-all:hover{
+    border:1px solid white;
+    border-radius:2px;
+} 
+.all{
+    padding-left:3px;
+    color:white;
+    text-decoration:none;
+}
+.panel-data{
+    display:flex;
+    align-items:center;
+    height:40px;
+}
+.panel-ops a{
+    padding:12px 9px;
+    color:white;
+    text-decoration:none;
+}
+.panel-ops{
+    cursor : pointer;
+}
+.close_btn{
+    margin-left:270px;
+    margin-top:-350px; 
+    color:white;
+    padding:2px;
+}
