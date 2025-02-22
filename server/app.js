@@ -6,6 +6,7 @@ const cors = require('cors');
 const router = require('./routes/router');
 const cookieParser = require("cookie-parser");
 const jwt = require("jsonwebtoken");
+const path = require('path');
 
 require('./db/conn');
 const DefaultData = require('./defaultData');
