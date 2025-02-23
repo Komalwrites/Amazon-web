@@ -22,7 +22,7 @@ const BuyProduct = () => {
   const [inddata, setInddata] = useState("");
 
   const getinddata = async () => {
-    const res = await fetch(`/getproduct/${id}`, {
+    const res = await fetch(`https://amazon-web-server-6o27.onrender.com/getproduct/${id}`, {
         method: "GET",
         headers: {
             Accept: "application/json",
@@ -47,7 +47,7 @@ useEffect(() => {
 
 const addtocart = async (id) => {
   // console.log(id);
-  const check = await fetch(`/addcart/${id}`, {
+  const check = await fetch(`https://amazon-web-server-6o27.onrender.com/addcart/${id}`, {
       method: "POST",
       headers: { 
           Accept: "application/json",
