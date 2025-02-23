@@ -39,7 +39,7 @@ const Header = () => {
   const [drOpen, setDrOpen] = useState(false);
 
   const getdetailsvaliduser = async () => {
-    const res = await fetch("/validuser", {
+    const res = await fetch("https://amazon-web-server-6o27.onrender.com/validuser", {
         method: "GET",
         headers: {
             Accept: "application/json",
@@ -77,7 +77,7 @@ useEffect(() => {
 }, []);
 
   const logoutUser = async () => {
-    const res2 = await fetch("/logout", {
+    const res2 = await fetch("https://amazon-web-server-6o27.onrender.com/logout", {
         method: "GET",
         headers: {
             Accept: "application/json",
