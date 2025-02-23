@@ -21,7 +21,7 @@ const Sign_up = () => {
 
     const { fname, email, password, cpassword } = userData;
     try {
-        const res = await fetch("/register", {
+        const res = await fetch("https://amazon-web-server-6o27.onrender.com/register", {
             method: "POST",
             headers: {
                 "Content-Type": "application/json"
