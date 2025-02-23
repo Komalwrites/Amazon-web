@@ -13,7 +13,7 @@ const Cart = () => {
     // console.log(cartdata.length);
 
     const getdatabuy = async () => { 
-        const res = await fetch("/cartdetails", {
+        const res = await fetch("https://amazon-web-server-6o27.onrender.com/cartdetails", {
             method: "GET", 
             headers: {
                 Accept:"application/json",
