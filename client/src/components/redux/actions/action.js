@@ -3,7 +3,7 @@ export const getProducts = createAsyncThunk(
     'products/getProducts',
     async () => {
       try {
-        const response = await fetch('/getproducts', {
+        const response = await fetch('https://amazon-web-server-6o27.onrender.com/getproducts', {
           method: 'GET',
           headers: {
             'Content-Type': 'application/json',
