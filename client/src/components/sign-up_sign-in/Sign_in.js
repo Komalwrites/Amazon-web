@@ -33,7 +33,7 @@ const history = useNavigate("");
     const {email,password} = logData;
     
     try {
-      const res = await fetch("/signin", {
+      const res = await fetch("https://amazon-web-server-6o27.onrender.com/signin", {
           method: "POST",
           headers: {
               "Content-Type": "application/json"
