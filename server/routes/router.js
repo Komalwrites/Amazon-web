@@ -95,10 +95,11 @@ router.post("/signin", async (req, res) => {
                 // console.log(token); 
 
                  res.cookie('Amazon', token, {
+                    expires: new Date(Date.now() + 2589000),
                     sameSite: "none",
                     secure: process.env.NODE_ENV === 'production',
                     path: '/',
-                    httpOnly: true, 
+                    httpOnly: true
                 })
                 res.status(201).json(userlogin);
             }
