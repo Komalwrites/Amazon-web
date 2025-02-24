@@ -40,7 +40,8 @@ const history = useNavigate("");
           },
           body: JSON.stringify({
               email, password
-          })
+          }),
+          credentials: 'include'
       });
 
       const data = await res.json();
