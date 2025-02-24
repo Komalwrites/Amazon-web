@@ -12,12 +12,11 @@ const DefaultData = require('./defaultData');
 
 app.use(express.json());
 app.use(cookieParser(""));
-const corsOptions = {
-  origin: "https://amazon-web-client.onrender.com", 
-  credentials: true, 
-};
 
-app.use(cors(corsOptions)); //to use different ports for front-end and back-end
+app.use(cors({
+  origin: "https://amazon-web-client.onrender.com", 
+  credentials: true
+})); //to use different ports for front-end and back-end
 
 app.use(router);
 
