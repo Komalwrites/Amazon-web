@@ -98,7 +98,6 @@ router.post("/signin", async (req, res) => {
                     httpOnly: false,
                     sameSite: process.env.NODE_ENV === 'production' ? 'none' : 'lax',
                     secure: process.env.NODE_ENV === 'production',
-                    domain: 'https://amazon-web-client.onrender.com',
                     path: '/',
                 })
                 res.status(201).json(userlogin);
