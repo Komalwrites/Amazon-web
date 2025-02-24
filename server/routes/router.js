@@ -96,8 +96,8 @@ router.post("/signin", async (req, res) => {
 
                  res.cookie('Amazon', token, {
                     httpOnly: true,
-                    sameSite: process.env.NODE_ENV === 'production' ? 'none' : 'lax',
-                    secure: process.env.NODE_ENV === 'production',
+                    sameSite: "none",
+                    secure: true,
                     path: '/',
                 })
                 res.status(201).json(userlogin);
