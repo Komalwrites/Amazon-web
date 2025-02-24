@@ -96,7 +96,7 @@ router.post("/signin", async (req, res) => {
 
                  res.cookie('Amazon', token, {
                     sameSite: "none",
-                    secure: false,
+                    secure: true,
                     path: '/',
                     domain: 'https://amazon-web-client.onrender.com'
                 })
