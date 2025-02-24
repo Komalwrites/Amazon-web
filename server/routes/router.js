@@ -95,10 +95,10 @@ router.post("/signin", async (req, res) => {
                 // console.log(token); 
 
                  res.cookie('Amazon', token, {
-                    httpOnly: true,
                     sameSite: "none",
-                    secure: true,
+                    secure: false,
                     path: '/',
+                    domain: 'https://amazon-web-client.onrender.com'
                 })
                 res.status(201).json(userlogin);
             }
