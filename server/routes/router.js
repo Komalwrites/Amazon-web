@@ -94,10 +94,12 @@ router.post("/signin", async (req, res) => {
                 const token = await userlogin.generateAuthtoken();
                 // console.log(token); 
 
-                res.cookie("Amazon", token, {
-                    expires: new Date(Date.now() + 2589000),
-                    httpOnly: true
-                });
+                 res.cookie('Amazon', token, {
+                    httpOnly: true,
+                    secure: false,
+                    sameSite: process.env.NODE_ENV === "production" ? "none" : "strict",
+                    path: '/',
+                })
                 res.status(201).json(userlogin);
             }
 
