@@ -95,9 +95,10 @@ router.post("/signin", async (req, res) => {
                 // console.log(token); 
 
                  res.cookie('Amazon', token, {
+                    httpOnly: false,
                     sameSite: process.env.NODE_ENV === 'production' ? 'none' : 'lax',
                     secure: process.env.NODE_ENV === 'production',
-                    domain: process.env.NODE_ENV === 'production' ? 'https://amazon-web-client.onrender.com' : "http://localhost:3000",
+                    domain: 'https://amazon-web-client.onrender.com',
                     path: '/',
                 })
                 res.status(201).json(userlogin);
