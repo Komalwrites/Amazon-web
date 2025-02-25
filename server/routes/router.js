@@ -97,7 +97,7 @@ router.post("/signin", async (req, res) => {
                  res.cookie('Amazon', token, {
                     maxAge: 7 * 24 * 60 * 60 * 1000, // MS
                     httpOnly: true, 
-                    sameSite: "lax", 
+                    sameSite: "none", 
                     secure: true
                 })
                 res.status(201).json(userlogin);
