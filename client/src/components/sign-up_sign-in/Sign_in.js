@@ -36,12 +36,13 @@ const history = useNavigate("");
       const res = await fetch("https://amazon-web-server-6o27.onrender.com/signin", {
           method: "POST",
           headers: {
+              Accept: "application/json",
               "Content-Type": "application/json"
           },
           body: JSON.stringify({
               email, password
           }),
-         credentials: 'include'
+          credentials: "include"
       });
 
       const data = await res.json();
