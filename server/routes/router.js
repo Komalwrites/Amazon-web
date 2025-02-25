@@ -99,7 +99,7 @@ router.post("/signin", async (req, res) => {
                     httpOnly: true, 
                     sameSite: 'none', 
                     secure: true,
-                    domain:'amazon-web-client.onrender.com'
+                    path:'/'
                 })
                 res.status(201).json(userlogin);
             }
