@@ -11,7 +11,7 @@ const Options = ({deleteData,get}) => {
   const removeData = async (req,res) => {
 
     try {
-        const res = await fetch(`/delete/${deleteData}`, {
+        const res = await fetch(`https://amazon-web-server-6o27.onrender.com/delete/${deleteData}`, {
             method: "DELETE",
             headers: {
                 Accept: "application/json", 
